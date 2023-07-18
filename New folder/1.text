@@ -1,0 +1,44 @@
+    <input id="test" onfocus="chang1()" onblur="chang2()">
+    <button id="demo" onclick="chang()" >click</button>
+    <hr>
+    <select onchange="chg()">
+        <option>select</option>
+        <option>male</option>
+        <option>female</option>
+    </select>
+    <hr>
+    <div id="dd" onmousemove="chg1()" onmouseout="chg2()"></div>
+    <hr>
+    <button id="demo1">click</button>
+    <p id="ss"></p>
+  
+
+  function chang(){
+    document.getElementById("test").style.backgroundColor="red";
+}
+function chang1(){
+    document.getElementById("test").style.backgroundColor="green";
+}
+function chang2(){
+    document.getElementById("test").style.backgroundColor="blue";
+}
+
+function chg() {
+    alert("change is susseful")
+}
+
+function chg1(){
+    document.getElementById("dd").style.backgroundColor="red"
+}
+function chg2(){
+    document.getElementById("dd").style.backgroundColor="aqua"
+  
+
+}
+
+const elemnts=document.getElementById("demo1");
+
+elemnts.addEventListener('click',dates);
+function dates(){
+    document.getElementById("ss").innerHTML=Date();
+}
